@@ -1,0 +1,8 @@
+#!/bin/bash
+
+let sum=0
+for x in $@
+do
+sum=$((${x}+$sum))
+done
+echo $sum

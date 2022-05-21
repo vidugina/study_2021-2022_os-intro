@@ -1,0 +1,6 @@
+#!/bin/bash
+
+move=~/backup
+arh=~/backup/code01
+cp code01 ${move}
+bzip2 ${arh}
