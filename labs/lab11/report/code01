@@ -1,0 +1,13 @@
+#!/bin/bash
+
+while getopts :i:o:p:Cn letter
+do case $letter in
+i) inputfile=$OPTARG; cat $inputfile;;
+o) outputfile=$OPTARG; cat $inputfile>$outputfile;;
+p) word=$OPTARG;;
+C) ;;
+n) grep -n $word $outputfile;;
+*) Illegal option $letter
+esac
+done
+

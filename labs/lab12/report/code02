@@ -1,0 +1,7 @@
+#!/bin/bash
+M=/usr/share/man/man1/$1.1.gz
+
+if test -f $M
+then less $M
+else echo "Данной справки нет"
+fi

@@ -1,0 +1,9 @@
+#!/bin/bash
+I=$1
+find ~/lab11 -name "*.tmp" -delete
+while ((I!=0))
+do 
+touch $I.tmp
+let "I -= 1"
+done
+

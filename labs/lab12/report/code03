@@ -1,0 +1,26 @@
+#!/bin/bash
+
+a=$RANDOM
+
+while ((a!=0)) 
+do
+	let i=a%100
+		if (($i<65))
+		then
+			while (($i<65))
+			do let i=i+10
+			done
+			printf "\x$(printf %x $i)"
+
+		elif (($i>90))
+		then
+			let i=i-10
+			printf "\x$(printf %x $i)"
+			
+
+		else
+			printf "\x$(printf %x $i)"			
+		fi
+	let a=a/10
+done
+echo

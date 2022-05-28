@@ -1,0 +1,8 @@
+#!/bin/bash
+gcc c_code02.c -o c_code02
+./c_code02
+case $? in
+0) echo "Число ноль";;
+1) echo "Число положительное";;
+2) echo "Число отрицательное";;
+esac
